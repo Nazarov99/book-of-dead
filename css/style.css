@@ -1,0 +1,355 @@
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-background: rgb(35, 29, 71);
+    --color-header-background: rgb(27, 21, 54);
+    --color-footer-background: rgb(21, 16, 40);
+    --color-border-lang: #747474;
+    --color-footer-mail: #c8c8c8;
+
+    --box-shadow: 0 2rem 3rem var(--color-white);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html {
+    background-color: var(--color-background);
+    box-sizing: border-box;
+}
+
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
+a{
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+.cnt{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.jet-button {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    color: var(--color-white);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+    border: 1px solid var(--color-white);
+    background: linear-gradient(263.87deg, rgb(148, 78, 245) 0%, rgb(92, 36, 252) 100%);
+    box-shadow: rgb(25 201 245 / 10%) 0 10px 20px, rgb(92 36 252 / 10%) 0 10px 20px, rgb(148 78 245) 0 -2px 4px inset, rgb(148 78 245 / 60%) 0 -8px 8px inset;
+}
+
+/*** Start Header ***/
+
+header{
+    box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+    position: relative;
+    z-index: 2;
+    display: flex;
+    height: 4rem;
+    background: var(--color-header-background);
+    color: var(--color-white);
+}
+
+header .flxa{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .flxa .logo_image{
+    width: 190px;
+    display: block;
+    height: auto;
+}
+
+header .flxa nav{
+    align-items: center;
+    grid-gap: 15px;
+}
+
+header .flxa .flx{
+    display: flex;
+    justify-content: space-between;
+}
+
+header .flxa .burger{
+    height: 16px;
+    width: 20px;
+    justify-content: space-between;
+    flex-direction: column;
+    display: none;
+    cursor: pointer;
+}
+
+header .flxa .burger .burger_line{
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-white);
+}
+
+header .flxa .flx .nav_link {
+    font-size: 14px;
+}
+
+header .flx .all_langs {
+    position: relative;
+    margin-left: 15px;
+}
+
+header .flx .all_langs .cur_lang .flag {
+    width: 29px;
+    height: 20px;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    border: solid 1px var(--color-border-lang);
+}
+
+.all_langs .lst_lang {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    transition: 300ms;
+    opacity: 0;
+    pointer-events: none;
+    top: -15px;
+    left: -8px;
+    background-color: var(--color-background);
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 1px 8px 0 rgb(0 0 0 / 58%);
+}
+
+.all_langs .lst_lang .flag {
+    width: 29px;
+    height: 20px;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    border: solid 1px var(--color-border-lang);
+    cursor: pointer;
+}
+
+.all_langs:hover .lst_lang {
+    opacity: 1;
+    pointer-events: all;
+    top: -8px;
+}
+
+.flx .all_langs .cur_lang .ru {
+    background-image: url(/images/flags/russia.svg);
+}
+
+.flx .all_langs .lst_lang .nav_link .en {
+    background-image: url(/images/flags/uk.svg);
+}
+
+.flx .all_langs .lst_lang .nav_link .es {
+    background-image: url(/images/flags/spain.svg);
+}
+
+.flx .all_langs .lst_lang .nav_link .fr {
+    background-image: url(/images/flags/france.svg);
+}
+
+.flx .all_langs .lst_lang .nav_link .de {
+    background-image: url(/images/flags/de.svg);
+}
+
+.flx .all_langs .lst_lang .nav_link .ua {
+    background-image: url(/images/flags/ua.svg);
+}
+
+.flx .all_langs .lst_lang .nav_link .pt {
+    background-image: url(/images/flags/pt.svg);
+}
+
+.flx .all_langs .lst_lang .nav_link .tr {
+    background-image: url(/images/flags/tr.svg);
+}
+
+.flx .all_langs .lst_lang .nav_link .pl {
+    background-image: url(/images/flags/pl.svg);
+}
+
+.flx .all_langs .lst_lang .nav_link .az {
+    background-image: url(/images/flags/azer3.svg);
+}
+
+.flx .all_langs .lst_lang .nav_link .kz {
+    background-image: url(/images/flags/kz.svg);
+}
+
+.flx .all_langs .lst_lang .nav_link .ar {
+    background-image: url(/images/flags/arab.svg);
+}
+
+.flx .nav_lst {
+    position: relative;
+    cursor: pointer;
+}
+
+.flx .nav_lst .nav_lst_header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.flx .nav_lst .nav_lst_header::after {
+    content: "";
+    display: block;
+    background-image: url(/images/icons/grey.svg);
+    background-size: contain;
+    background-position: center;
+    width: 10px;
+    height: 8px;
+    filter: invert(1);
+    background-repeat: no-repeat;
+    margin-left: 5px;
+    transition: 300ms;
+}
+
+.nav_lst:hover .nav_lst_header::after {
+    transform: rotate(180deg);
+}
+
+.nav_lst:hover .nav_lst_cnt {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.flx .nav_lst .nav_lst_cnt {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transition: 300ms;
+    top: -10px;
+    background-color: var(--color-background);
+    border: solid 1px var(--color-black);
+    width: 230px;
+    padding: 40px 10px 11px 10px;
+    right: -10px;
+    border-radius: 5px;
+    box-shadow: 0 6px 8px 0 rgb(0 0 0 / 58%);
+    display: flex;
+    flex-direction: column;
+    grid-gap: 9px;
+    align-items: flex-start;
+}
+
+.nav_lst:hover .nav_lst_cnt {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/*** End Header ***/
+
+/*** Start Footer ***/
+
+footer{
+    margin-top: auto;
+    background: var(--color-footer-background);
+}
+
+footer .cnt{
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer_mail {
+    color: var(--color-footer-mail);
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+}
+
+/*** End Footer ***/
+
+
+
+
+
+
+/*** Start Media Css ***/
+
+@media (max-width: 992px){
+
+}
+
+@media (max-width: 768px){
+    header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        box-shadow: 0 2px 12px 0 rgb(0 0 0 / 58%);
+    }
+
+    header nav.flx {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header nav {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        padding: 0 15px 10px;
+        background-color: white;
+        transition: 300ms;
+        border-bottom: solid 1px #aaa;
+        pointer-events: none;
+        top: 55px;
+        opacity: 0;
+        box-shadow: 0 8px 8px 0 rgb(0 0 0 / 18%);
+    }
+
+    header .flxa .burger{
+        display: flex;
+    }
+
+    header .flxa .hide{
+        display: none!important;
+    }
+
+    .logo_image {
+        width: 43px;
+    }
+
+    .cnt.active nav {
+        top: 60px;
+        pointer-events: all;
+        opacity: 1;
+    }
+
+    .nav_link:not(:first-child), .nav_link, .nav_lst {
+        margin-left: 0;
+        font-size: 16px;
+        margin-bottom: 7px;
+    }
+
+    .nav_link {
+        margin: 0;
+    }
+}
+
+/*** End Media Css ***/

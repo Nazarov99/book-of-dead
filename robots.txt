@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /*.php$
+Allow: /index.php
+Allow: /start.php
+Allow: /reviews.php
+Allow: /indicators.php
+Allow: /signals.php
+Allow: /keltner.php
+Allow: /stochastic.php
+Allow: /alligator.php
+Allow: /bollinger.php
+
+Sitemap: https://olymptrade-binaryoptions.com/sitemap.xml
