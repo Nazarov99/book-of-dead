@@ -18,7 +18,7 @@
     <br>
     <br>
     <br>
-    <button type="button" class="jet-button">Играть</button>
+    <button type="button" class="book-button">Играть</button>
     <br>
     <br>
     <br>

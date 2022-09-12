@@ -1,6 +1,6 @@
 <div class="cnt flxa" id="top">
     <a href="/" class="logo-link">
-        <img src="./images/logo/logo.svg" class="logo_image">
+        <img src="./images/logo/logo.png" class="logo_image">
     </a>
     <nav class="flx">
         <a href="/" class="nav_link">
